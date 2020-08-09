@@ -44,33 +44,94 @@ void main()
 }
 
 
-
+//sort function
 void sort_array(unsigned int len,unsigned char* array1)
 {
+ int temp=0;
+ for(int i=0;i<len-1;++i)
+    for(int j=0;j<len-1-i;++j)
+    {
+     if(array1[j]<array1[j+1])
+       {
+        temp = array1[j];
+        array1[j] = array1[j+1];
+        array1[j+1] = temp;
+       }
+    }
 }
 
+
+//minimum function
 unsigned int find_minimum(unsigned int len,unsigned char* array1)
 {
+ unsigned  char min;
+ sort_array(len,array1);
+ min = array1[len-1];
+ return min;
 }
 
+
+//maximum function
 unsigned int find_maximum(unsigned int len,unsigned char* array1)
 {
+unsigned  char max;
+ sort_array(len,array1);
+ max = array1[0];
+ return max;
 }
 
+
+//mean function
 unsigned int find_mean(unsigned int len,unsigned char* array1)
 {
+ int mean;
+  for(int i=0;i<len;++i)
+  { 
+   mean = mean + array1[i];
+  }
+  mean = mean/len;
+  return mean;
 }
 
+
+//median function
 unsigned int find_median(unsigned int len,unsigned char* array1)
 {
+ unsigned  char median;
+ sort_array(len,array1);
+ if( len % 2 == 0)
+   median = (array1[len/2-1]+array1[len/2])/2;
+ else
+   median = array1[(len-1)/2];
+ return median;
 }
 
+
+//print array function
 void print_array(unsigned int len,unsigned char* array1)
 {
+  printf(" The array is "); 
+ for(int i=0;i<len;++i)
+ {
+  printf(" %d ",array1[i]);
+ }
 }
 
+
+//print statistics function
 void print_statistics(unsigned int len,unsigned char* array1)
 {
+ unsigned char median, mean,min,max;
+ mean   = find_mean( len,array1);
+ median = find_median(len,array1);
+ printf("\n Sorted array is ");
+ print_array(len,array1);
+ max = find_maximum(len,array1);
+ min = find_minimum(len,array1);
+ printf("\n Median is %d ",median);
+ printf("\n Mean is %d ", mean);
+ printf("\n Minimum is %d ",min);
+ printf("\n Maximum is %d",max);
 }
 
 
