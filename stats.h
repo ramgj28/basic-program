@@ -21,20 +21,112 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief A function that prints the statistics of an array including minimum, 
+ * maximum, mean, and median.
  *
- * <Add Extended Description Here>
+ * The function takes in two parameters- len and array1.
+ * It uses various other functions to find mean, median, minimum, maximum.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
  *
- * @return <Add Return Informaiton here>
+ * @return The function only prints the values, doesn't return any values.
  */
+void print_statistics(unsigned int len,unsigned char* array1);
+
+
+/**
+ * @brief Given an array of data and a length, prints the array to the screen.
+ *
+ * The function takes in two parameters- len and array1 and prints the array 
+ * to the screen
+ *
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
+ *
+ * @return The function only prints the values, doesn't return any values.
+ */
+void print_array(unsigned int len,unsigned char* array1);
+
+
+/**
+ * @brief  Given an array of data and a length, returns the median value
+ *
+ * The function takes in two parameters- len and array1.
+ * It returns the median value.For this sorting is done by calling another 
+ * function sort_array() 
+ *
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
+ *
+ * @return An unsigned integer which is the median of the array
+ */
+unsigned int find_median(unsigned int len,unsigned char* array1);
+
+
+/**
+ * @brief  Given an array of data and a length, returns the mean.
+ *
+ * The function takes in two parameters- len and array1.
+ * It returns the mean value.
+ *
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
+ *
+ * @return An unsigned integer which is the mean of the array.
+ */
+unsigned int find_mean(unsigned int len,unsigned char* array1);
+
+
+/**
+ * @brief Given an array of data and a length, returns the maximum.
+ *
+ * The function takes in two parameters- len and array1.
+ * It returns the maximum value.For this sorting is done by calling another 
+ * function sort_array() 
+ *
+ *
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
+ *
+ * @return An unsigned integer which is the maximum of the array.
+ */
+unsigned int find_maximum(unsigned int len,unsigned char* array1);
+
+
+/**
+ * @brief  Given an array of data and a length, returns the minimum.
+ *
+ * The function takes in two parameters- len and array1.
+ * It returns the minimum value.For this sorting is done by calling another 
+ * function sort_array() 
+ *
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
+ *
+ * @return An unsigned integer which is the minimum of the array.
+ */
+unsigned int find_minimum(unsigned int len,unsigned char* array1);
+
+
+/**
+ * @brief  Given an array of data and a length, sorts the array from largest 
+ * to smallest. 
+ *
+ * The function takes in two parameters- len and array1.
+ * sorting is done usinf nested for loops in descending order.
+ *
+ * @param len    - An unsigned integer as the size of the array.
+ * @param array1 - An unsigned char pointer to an n-element array.
+ *
+ * @return The function returns an unsigned char pointer to an n-element array.
+ *         which is sorted.
+ */
+unsigned char* sort_array(unsigned int len,unsigned char* array1);
+
+
 
 
 #endif /* __STATS_H__ */
