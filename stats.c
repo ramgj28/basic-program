@@ -45,7 +45,7 @@ void main()
 
 
 
-unsigned char* sort_array(unsigned int len,unsigned char* array1)
+void sort_array(unsigned int len,unsigned char* array1)
 {
 }
 

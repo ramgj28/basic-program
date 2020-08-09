@@ -121,10 +121,9 @@ unsigned int find_minimum(unsigned int len,unsigned char* array1);
  * @param len    - An unsigned integer as the size of the array.
  * @param array1 - An unsigned char pointer to an n-element array.
  *
- * @return The function returns an unsigned char pointer to an n-element array.
- *         which is sorted.
+ * @return Nothing is returned
  */
-unsigned char* sort_array(unsigned int len,unsigned char* array1);
+void sort_array(unsigned int len,unsigned char* array1);
 
 
 
