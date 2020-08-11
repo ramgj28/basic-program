@@ -1,1 +1,1 @@
-This is a project to develop a build system for embedded sytems that can support multiple platforms
+This is a project to get started with making your own header file with documentation.
